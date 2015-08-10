@@ -25,6 +25,13 @@ datadog-example:
     - onlyif: test ! -f /etc/dd-agent/datadog.conf -a -f /etc/dd-agent/datadog.conf.example
     - require:
       - pkg: datadog-pkg
+  {% if salt['grains.get']('docker') == 'installed' %}
+  cmd.run:
+    - name: cp /etc/dd-agent/conf.d/docker.conf.example /etc/dd-agent/conf.d/docker.conf
+    - require:
+      - pkg: datadog-pkg
+  {% endif %}
+
  
 datadog-conf:
   file.replace:
