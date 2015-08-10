@@ -29,7 +29,7 @@ datadog-example:
 {% if salt['grains.get']('docker') == 'installed' %}
 datadog-docker:
   cmd.run:
-    - name: cp /etc/dd-agent/conf.d/docker.conf.example /etc/dd-agent/conf.d/docker.conf
+    - name: cp /etc/dd-agent/conf.d/docker.yaml.example /etc/dd-agent/conf.d/docker.yaml
     - require:
       - pkg: datadog-pkg
 {% endif %}
