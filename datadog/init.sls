@@ -28,6 +28,11 @@ datadog-example:
 
 {% if salt['grains.get']('docker') == 'installed' %}
 datadog-docker:
+  user.present:
+    - name: dd-agent
+    - groups:
+      - docker
+      - nogroup
   cmd.run:
     - name: cp /etc/dd-agent/conf.d/docker.yaml.example /etc/dd-agent/conf.d/docker.yaml
     - onlyif: test ! -f /etc/dd-agent/conf.d/docker.yaml -a -f /etc/dd-agent/conf.d/docker.yaml.example
