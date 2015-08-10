@@ -50,6 +50,7 @@ datadog-agent-service:
   service:
     - name: datadog-agent
     - running
+    - reload: True
     - enable: True
     - watch:
       - pkg: datadog-agent
