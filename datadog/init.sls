@@ -48,9 +48,8 @@ datadog-conf:
       - cmd: datadog-example
  
 datadog-agent-service:
-  service:
+  service.running:
     - name: datadog-agent
-    - running
     - reload: True
     - enable: True
     - watch:
