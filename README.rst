@@ -13,7 +13,3 @@ Available States
 Installs and runs the Datadog agent.
 
 This formula uses pillar data to store the Datadog API key for your account (see ``pillar.example``).
-
-Use the following grains to install the associated example configuration file :
-
-- docker.installed
