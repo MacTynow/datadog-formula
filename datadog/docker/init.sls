@@ -11,7 +11,5 @@ datadog-docker:
       - pkg: datadog-pkg
 
 datadog-docker-restart:
-  service.running:
-    - name: datadog-agent
-    - reload: True
-    - enable: True
+  cmd.run:
+    - name: /etc/init.d/datadog-agent restart

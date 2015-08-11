@@ -4,4 +4,4 @@ init_config:
 
 instances:
 # url: the API endpoint of your Mesos master
-  - url: "http://{{ url }}:8080"
+  - url: "http://{{ url }}:{{ port }}"
