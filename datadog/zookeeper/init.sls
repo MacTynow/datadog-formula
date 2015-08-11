@@ -8,3 +8,5 @@ datadog-zookeeper:
 datadog-zookeeper-restart:
   cmd.run:
     - name: /etc/init.d/datadog-agent restart
+    - watch:
+      - cmd: datadog-zookeeper

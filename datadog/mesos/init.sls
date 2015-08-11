@@ -12,3 +12,5 @@
 datadog-mesos-restart:
   cmd.run:
     - name: /etc/init.d/datadog-agent restart
+    - watch:
+      - file: /etc/dd-agent/conf.d/mesos.yaml
