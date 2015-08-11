@@ -7,8 +7,6 @@ datadog-mesos:
     - template: jinja
     - defaults:
       - url: 'localhost'
-
-datadog-agent-service:
   service.running:
     - name: datadog-agent
     - reload: True
