@@ -1,4 +1,4 @@
-datadog-mesos:
+/etc/dd-agent/conf.d/mesos.yaml:
   file.managed:
     - source: salt://datadog/mesos/files/mesos.yaml
     - user: dd-agent
