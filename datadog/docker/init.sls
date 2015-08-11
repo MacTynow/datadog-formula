@@ -11,7 +11,7 @@ datadog-docker:
       - pkg: datadog-pkg
 
 datadog-docker-restart:
-  cmd.run:
+  cmd.wait:
     - name: /etc/init.d/datadog-agent restart
     - watch:
       - cmd: datadog-docker

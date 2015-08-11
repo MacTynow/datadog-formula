@@ -10,7 +10,7 @@
         port: '5050'
 
 datadog-mesos-restart:
-  cmd.run:
+  cmd.wait:
     - name: /etc/init.d/datadog-agent restart
     - watch:
       - file: /etc/dd-agent/conf.d/mesos.yaml
