@@ -4,4 +4,4 @@ init_config:
 
 instances:
 # url: the API endpoint of your Marathon master
-  - url: "http://{{ grains['fqdn'] }}:{{ port }}"
+  - url: "http://{{ url }}:{{ port }}"
