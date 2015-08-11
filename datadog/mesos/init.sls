@@ -6,7 +6,7 @@
     - mode: 644
     - template: jinja
     - defaults:
-      - url: 'localhost'
+        url: 'localhost'
   service.running:
     - name: datadog-agent
     - reload: True
